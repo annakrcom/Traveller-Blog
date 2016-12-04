@@ -1,0 +1,146 @@
+.get-intouch {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-align: center; 
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #282828;
+    clear: both;
+    box-sizing: border-box;
+}
+
+.wrapper-getintouch {
+	width: 40%;
+	text-align: left;
+	padding: 20px 20px 20px 50px;
+	background-color: #1e1e1e;
+	float: left;
+	box-sizing: border-box;
+	height: 100%;
+}
+.get-intouch-form {
+	width: 100%;
+	margin: auto;
+	text-align: left;
+}
+.get-intouch .submit-button {
+	width: 200px;
+	height: 50px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.get-intouch .submit-button:hover {
+	background-color: #212121;
+	border-color: #F2784B;
+	font-weight: 300;
+}
+.get-intouch h4{
+	letter-spacing: 1.5px;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.get-intouch h5{
+	letter-spacing: 1px;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin:0;
+}
+
+.get-intouch h6{
+	letter-spacing: 1px;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #F2784B;
+	margin: 0;
+}
+
+form .get-intouch-form label,
+.get-intouch .submit-button {
+	font-size: 1.3em;
+}
+
+.get-intouch-form textarea {
+	border-radius: 10px;
+	background: none;
+	border: 1px solid white;
+}
+.get-intouch-form textarea:focus {
+    border: 1px solid #F2784B;
+    outline: none;
+}
+
+.get-intouch-form input,
+.get-intouch .submit-button {
+    background: none;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    
+    
+}
+
+.get-intouch-form input,
+.get-intouch-form textarea {
+	padding-left: 25px;
+	width: 70%;
+	margin: 10px 0;
+	color: white;
+	font-weight: 100;
+}
+
+.get-intouch-form input:focus {
+    border: 1px solid #F2784B;
+}
+
+.get-intouch-form input[type="email"] {
+    width: 30%;
+    text-align: left;
+    padding: 5px 25px;
+}
+
+.get-intouch-form input:hover,
+.get-intouch-form textarea:hover {
+background-color: #212121;
+}
+
+.our-team {
+	background-color: #333333;
+	width: 60%;
+	float: right;
+	height: 100%;
+}
+
+.team-member {
+	margin: 20px 30px;
+	text-align: left;
+	clear: both;
+}
+
+.our-team img {
+	max-width: 150px;
+	border-radius: 150px;
+	border: 3px solid #F2784B;
+	float: left;
+	margin: 10px 10px 10px 15%;
+}
+
+.member-info {
+	width: 50%;
+	margin-top: 40px;
+	float: right;
+
+}
+
+.member-info a:hover {
+	color: orange;
+}
