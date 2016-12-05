@@ -4,13 +4,10 @@ $(document).ready(function(){
 
 		$('.all-posts').addClass('js-category-active').removeClass('js-category-hidden');    // filters for blog topics start
 
-
-	//top destinations & new destinations
-
+		//top destinations & new destinations
 		$('.btn-all-posts').click(function(){
 			$('.all-posts').addClass('js-category-active').removeClass('js-category-hidden');
-
-
+			
 		});	
 		
 			$('.btn-summer').click(function(){
@@ -25,9 +22,6 @@ $(document).ready(function(){
 		});
 
 		// travellers lifehacks
-
-
-
 			$('.btn-saving-money').click(function(){
 			$('.saving-money').addClass('js-category-active').removeClass('js-category-hidden');
 			$('.being-smart').removeClass('js-category-active').addClass('js-category-hidden');
@@ -47,17 +41,22 @@ $(document).ready(function(){
 		var $userName = $name.val();															 //takes string with typed name
 
 		var $comment = $(this).siblings("textarea");											 //looks for textarea with text of comment
-		var $commentText = $comment.val();														 //takes string with typed comment text
+		var $commentText = $comment.val();
 
-		    $(this).parent().siblings(".all-comments").append('<div class="comment"><div class="comment-user">' 
-		        + '<img src="../../assets/images/avatar.png"><button class="direct-message" value="direct message">' + 'direct message</button></div>' +
-		        '<div class="comment-content"><h5><span class="user-name">' + $userName + '</span></h5>' +
-		        '<p>' + $commentText + '</p>' + '<button class="delete-comment-button">Delete comment</button></div></div>' );
-		}); 
+		var recepient = $(this).parent().siblings(".all-comments");				   			 //takes string with typed comment text
+		var newComment = document.createElement('div');
 
-
-
-
+		newComment.className = "comment";
+		newComment.innerHTML = '<div class="comment-user">' 
+		        + '<img src="../../assets/images/avatar.png"><button class="direct-message" value="direct message">' 
+		        + 'direct message</button></div>' +
+		        '<div class="comment-content"><h5><span class="user-name">' 
+		        + $userName + '</span></h5>' +
+		        '<p>' + $commentText + '</p>' +
+		         '<button class="delete-comment-button">Delete comment</button></div>';
+		  
+		 recepient.append(newComment);
+		});
 
 
 });

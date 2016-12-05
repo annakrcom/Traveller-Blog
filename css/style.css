@@ -12,9 +12,6 @@ body {
     cursor: pointer;
 }
  
- /* head of page: logo & navbar */
-
-
 .container-top {
     width: 100%;
     background-color: #111111;
@@ -52,7 +49,6 @@ nav {
 
 nav ul {
     width: 60%;
-   /* border: 1px solid red; */
 }
 
 nav li {
@@ -102,12 +98,10 @@ li.dropdown-menu {
     border: none;
 }
 
-/* search bar : textfield,button,label */
 .nav-search {
     width: 40%;
     color: white;
     vertical-align: bottom;
-    /*border: 1px solid blue;*/
     cursor: pointer;
     display: -webkit-box;
     display: flex;
@@ -168,10 +162,6 @@ input[name="searchbar"]:focus {
 }
 
 
-/* slider */
-
-
-
 .image-container img {
     width: 100%;
    height: 40%;
@@ -186,7 +176,6 @@ img.mask {
     width: 70%;
     height: 17%;   
 }
-
 
 /* categories 4-piece grid */
 
@@ -338,8 +327,6 @@ img.mask {
 }
 
 
-
-
 .button.button-clicked-prev {
     left:1%;
     background: url("../assets/icons/prev-dwn.png") no-repeat;
@@ -352,7 +339,7 @@ img.mask {
 }
 
 
-/* END OF SLIDER STYLING */
+
 
 .footer {
     background-color: #111111;

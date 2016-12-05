@@ -100,8 +100,6 @@ section {
 }
 
 /* styling of each blog post */
-
-
 .articles {
 	width: 70%;
 	height: 5500px;
@@ -158,8 +156,8 @@ article p {
 	text-align: left;
 }
 
-/* styling block of post comments */
 
+/* styling block of comments */
 .comments-container {
 	background-color: #eaeaea;
 	display: -webkit-box;
@@ -229,10 +227,12 @@ textarea {
     text-align: center;
     vertical-align: bottom; 
 }
+
 .comment-field label,
 input[name="user-name"] {
 	margin-right: 61%;
 }
+
  textarea {
 	width: 63%;
 	text-align: left;
@@ -262,8 +262,6 @@ textarea:focus {
 
 }
 
-
-
 .direct-message:focus {
 	outline: none;
 }
@@ -271,8 +269,6 @@ textarea:focus {
 	background-color: grey;
 }
 
-
-/* end of comment block styling */
 
 aside {
 	width: 27%;
@@ -282,7 +278,6 @@ aside {
 	-webkit-box-direction: normal;
 	        flex-direction: column;
 }
-
 
 
 .twitter-feed,
@@ -319,6 +314,10 @@ form.create-new-post {
 
 .create-new-post label {
 	font-weight: 300;
+}
+
+.create-new-post button {
+	margin-bottom: 10px;
 }
 
 #new-post-img {
