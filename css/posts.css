@@ -376,7 +376,7 @@ label#upload-photo-btn:hover{
 	margin-top: 50px;
 }
 
-.delete-button {
+.delete-button-post {
 	width: 100px;
 	height: 35px;
 	background-color: #d6d6d6;
@@ -394,7 +394,7 @@ label#upload-photo-btn:hover{
 	background-color: grey;
 }
 
-.delete-comment-button {
+.delete-button-comment {
 	width: 70px;
 	height: 35px;
 	background-color: #d6d6d6;
@@ -411,6 +411,4 @@ label#upload-photo-btn:hover{
 	margin-left: 25px;
 }
 
-.delete-comment-button:hover {
-	background-color: grey;
-}
+

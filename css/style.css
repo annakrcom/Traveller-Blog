@@ -184,7 +184,7 @@ img.mask {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
-    overflow: hidden;
+   /*overflow: hidden; */
 }
 
 .category {
@@ -212,6 +212,7 @@ img.mask {
     display: flex;
     justify-content: space-around;
     margin-bottom: 25%;
+
 }
 .cat-block p {
     width: 28%;
@@ -221,6 +222,7 @@ img.mask {
     color: white;
     border: 1px solid white;
     border-radius: 10px;
+
     
 }
 

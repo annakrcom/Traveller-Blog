@@ -65,7 +65,7 @@
 
 						<p>The decision on where to go and the change from pre-tourist to real tourist means that a fair number of complicated decisions must be made. How much time the tourist has available, the budget, travelling individually or in a group, going by airplane or cruise ship and many more elements must be factored in. Tourists at different ends of this Tourist Lifestyle Scale (TLS) will handle their decisions differently. Those on the allocentric side tend to pay providers directly at the destination as much as possible, while more psycho-centric tourists favour paying home country travel organizations up front, for example.</p>
 						
-						<div class="delete-button">DELETE POST</div>
+						<div class="delete-button delete-button-post">DELETE POST</div>
 
 						<div class="comments-container">
 							<h4>COMMENTS</h4>
@@ -79,7 +79,7 @@
 									<div class="comment-content">
 										<h5><span class="user-name">Name</span></h5>
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-										 <button class="delete-comment-button">Delete comment</button>
+										 <button class="delete-button delete-button-comment">Delete comment</button>
 									</div>
 								</div>
 								<div class="comment">
@@ -90,7 +90,7 @@
 									<div class="comment-content">
 										<h5><span class="user-name">Name</span></h5>
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-										 <button class="delete-comment-button">Delete comment</button>
+										 <button class="delete-button delete-button-comment">Delete comment</button>
 									</div>
 								</div>
 							</div>
@@ -124,7 +124,7 @@
 
 						<p>The decision on where to go and the change from pre-tourist to real tourist means that a fair number of complicated decisions must be made. How much time the tourist has available, the budget, travelling individually or in a group, going by airplane or cruise ship and many more elements must be factored in. Tourists at different ends of this Tourist Lifestyle Scale (TLS) will handle their decisions differently. Those on the allocentric side tend to pay providers directly at the destination as much as possible, while more psycho-centric tourists favour paying home country travel organizations up front, for example.</p>
 
-						<div class="delete-button">DELETE POST</div>
+						<div class="delete-button delete-button-post">DELETE POST</div>
 
 						<div class="comments-container">
 							<h4>COMMENTS</h4>
@@ -138,7 +138,7 @@
 									<div class="comment-content">
 										<h5><span class="user-name">Name</span></h5>
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-										 <button class="delete-comment-button">Delete comment</button>
+										 <button class="delete-button delete-button-comment">Delete comment</button>
 									</div>
 								</div>
 							</div>
@@ -171,7 +171,7 @@
 
 						<p>The decision on where to go and the change from pre-tourist to real tourist means that a fair number of complicated decisions must be made. How much time the tourist has available, the budget, travelling individually or in a group, going by airplane or cruise ship and many more elements must be factored in. Tourists at different ends of this Tourist Lifestyle Scale (TLS) will handle their decisions differently. Those on the allocentric side tend to pay providers directly at the destination as much as possible, while more psycho-centric tourists favour paying home country travel organizations up front, for example.</p>
 						
-						<div class="delete-button">DELETE POST</div>
+						<div class="delete-button delete-button-post">DELETE POST</div>
 
 						<div class="comments-container">
 							<h4>COMMENTS</h4>
@@ -186,7 +186,7 @@
 										<h5><span class="user-name">Name</span></h5>
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 										 </p>
-										 <button class="delete-comment-button">Delete comment</button>
+										 <button class="delete-button delete-button-comment">Delete comment</button>
 									</div>
 								</div>
 								<div class="comment">
@@ -197,7 +197,7 @@
 									<div class="comment-content">
 										<h5><span class="user-name">Name</span></h5>
 										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-										 <button class="delete-comment-button">Delete comment</button>
+										 <button class="delete-button delete-button-comment">Delete comment</button>
 									</div>
 								</div>
 							</div>
@@ -214,11 +214,10 @@
 		</div>
 			<aside>
 				<form class="create-new-post">
-
 					<h3>Write a new post</h3>
 
-					<label for="main-heading-new-post">Heading of your new post:</label><br>
-					<input id="main-heading-new-post" type="text" name="main-heading-new-post" placeholder="place it here..."><br>
+					<label for="heading-new-post">Heading of your new post:</label><br>
+					<input id="heading-new-post" type="text" name="heading-new-post" placeholder="place it here..."><br>
 					<br>
 					<label id="upload-photo-btn" for="new-post-img">Upload a photo for your post</label><br>
 					<input id="new-post-img" type="file" accept="image/*" ><br>
@@ -236,15 +235,15 @@
 					<textarea id="new-post-paragraph-2" placeholder="place new paragraph for your article here" rows="10"></textarea><br>
 
 
-					<label for="subheading-new-post-2">Add another 2nd level subheading:</label>
+					<label for="subheading-new-post-2">Add another 2nd level subheading and paragraph:</label>
 					<button id="subheading-2nd-level-btn" class="add-new-post-item" value="+">+</button><br>
-					<input id="subheading-new-post-2" type="text" name="subheading-new-post" placeholder="place it here..."><br>
+					<input id="subheading-new-post-2" class="optional-item" type="text" name="subheading-new-post" placeholder="place it here..."><br>
 
 					<label for="new-post-paragraph-3">Add another paragraph:</label>
-					<button id="paragraph-3" class="add-new-post-item" value="+">+</button><br>
-					<textarea id="new-post-paragraph-3" placeholder="place new paragraph for your article here" rows="10"></textarea><br>
+					<br>
+					<textarea id="new-post-paragraph-3" class="optional-item" placeholder="place new paragraph for your article here" rows="10"></textarea><br>
 
-					<button>Add post</button>
+					<button id="addPost">Add post</button>
 				</form>
 				<div class="twitter-feed">
 					<a class="twitter-timeline" data-lang="en" data-width="300" data-link-color="#E95F28" href="https://twitter.com/blog_traveller">Tweets by blog_traveller</a> 

@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 		var $recepient = $('.gallery-wrapper'); //caching in DOM for better performance
 
-		$('.gallery-item img').click(function(){   //onclick full-screening for images in gallery
+		$('.gallery-item img').click(function(){   //onclick full-screening & vise versa for images in gallery
 
 			var imageAddress = $(this).attr('src');
 			$recepient.prepend('<div class="photo-fullscreen"><img src=""></div>');
@@ -13,27 +13,32 @@ $(document).ready(function(){
 				$(this).remove();
 			});
 		       
-		});
+		});     
 
-		
-
-		pageSize = 5;                   //pagination setup
 
 		showPage = function(page) {
 		    $(".col").hide();
-		    $(".col").each(function(n) {
+		    $(".col").each(function(n) {   //pagination setup
 
-		        if (n >= pageSize * (page - 1) && n < pageSize * page)
+		    	if (page == 1) {
+		        	pageSize = 4;
+		        } else {
+		        	pageSize = 3;	
+		       };
+
+		       if(n >= pageSize * (page - 1) && n <= pageSize * page){
 		            $(this).show();
+		        }
 		    });        
 		}
 		    
 		showPage(1);
 
-		$(".pagin li a").click(function() {
+		$(".pagin li a").click(function(evt) {
+			evt.preventDefault();
 		    $(".pagin li a").removeClass("current");
 		    $(this).addClass("current");
-		    showPage(parseInt($(this).text()));  //pagination activate and take the parameter of chosen page
+		    showPage(parseInt($(this).text()));  //activate pagination and take the parameter of chosen page
 	});
     
 

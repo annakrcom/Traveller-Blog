@@ -81,7 +81,7 @@
 
 						<p>Right next to the Heritage Village is a little mosque, a flagpole which was once the tallest in the world, till Jordan exceeded.Abu Dhabi is famous for it's Corniche a 8 Km paved path along the waterfront facing the bay with a view of Lulu island.Great beach, exotic blue water... Chairs are for free. Best view on the skyline. </p>
 					
-					<div class="delete-button">DELETE POST</div>
+					<div class="delete-button delete-button-post">DELETE POST</div>
 
 					<div class="comments-container">
 						<h4>COMMENTS</h4>
@@ -95,7 +95,7 @@
 									<h5><span class="user-name">Name</span></h5>
 									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 									 </p>
-									 <button class="delete-comment-button">Delete comment</button>
+									 <button class="delete-button delete-button-comment">Delete comment</button>
 								</div>
 							</div>
 						</div>
@@ -143,7 +143,7 @@
 						Winter in the Lofoten Islands comes in thousands of colours that present a visual enjoyment of contrasts, hues and tones. The experience is even stronger at night, when the flickering northern lights in the sky are reflected in the sea..</p>
 
 					
-					<div class="delete-button">DELETE POST</div>
+					<div class="delete-button delete-button-post">DELETE POST</div>
 
 					<div class="comments-container">
 						<h4>COMMENTS</h4>
@@ -157,7 +157,7 @@
 									<h5><span class="user-name">Name</span></h5>
 									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 									 </p>
-									 <button class="delete-comment-button">Delete comment</button>
+									 <button class="delete-button delete-button-comment">Delete comment</button>
 								</div>
 							</div>
 						</div>
@@ -199,7 +199,7 @@
 					<p>Kerak and Shobak Castles are two of the many castles built during the Crusade period of the 1100s.   Due to their notable history in the world, Kerak and Shobak are now popular attractions sitting in the Jordanian countryside.  Unfortunately for the castles, time has not been on their side, as the compounds have fallen into a substantial form of ruin.  Beautiful architecture still remains, but the original glory of each has been lost to the ages.
 					For what it is worth, a visit to these castles may be quick for some and longer for others.  As much as exploring the ruins of castles from the Crusades is a dream for many, I much more enjoyed the views from these castles as they are perched high above the surrounding region.    If you do decide to visit these castles, I highly recommend reading up on them before visiting as the history is not presented very well at either sight.</p>
 					
-					<div class="delete-button">DELETE POST</div>
+					<div class="delete-button delete-button-post">DELETE POST</div>
 
 					<div class="comments-container">
 						<h4>COMMENTS</h4>
@@ -213,7 +213,7 @@
 									<h5><span class="user-name">Name</span></h5>
 									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 									 </p>
-									 <button class="delete-comment-button">Delete comment</button>
+									 <button class="delete-button delete-button-comment">Delete comment</button>
 								</div>
 							</div>
 						</div>
@@ -232,8 +232,8 @@
 				<form class="create-new-post">
 					<h3>Write a new post</h3>
 
-					<label for="main-heading-new-post">Heading of your new post:</label><br>
-					<input id="main-heading-new-post" type="text" name="main-heading-new-post" placeholder="place it here..."><br>
+					<label for="heading-new-post">Heading of your new post:</label><br>
+					<input id="heading-new-post" type="text" name="heading-new-post" placeholder="place it here..."><br>
 					<br>
 					<label id="upload-photo-btn" for="new-post-img">Upload a photo for your post</label><br>
 					<input id="new-post-img" type="file" accept="image/*" ><br>
@@ -251,15 +251,15 @@
 					<textarea id="new-post-paragraph-2" placeholder="place new paragraph for your article here" rows="10"></textarea><br>
 
 
-					<label for="subheading-new-post-2">Add another 2nd level subheading:</label>
+					<label for="subheading-new-post-2">Add another 2nd level subheading and paragraph:</label>
 					<button id="subheading-2nd-level-btn" class="add-new-post-item" value="+">+</button><br>
-					<input id="subheading-new-post-2" type="text" name="subheading-new-post" placeholder="place it here..."><br>
+					<input id="subheading-new-post-2" class="optional-item" type="text" name="subheading-new-post" placeholder="place it here..."><br>
 
 					<label for="new-post-paragraph-3">Add another paragraph:</label>
-					<button id="paragraph-3" class="add-new-post-item" value="+">+</button><br>
-					<textarea id="new-post-paragraph-3" placeholder="place new paragraph for your article here" rows="10"></textarea><br>
+					<br>
+					<textarea id="new-post-paragraph-3" class="optional-item" placeholder="place new paragraph for your article here" rows="10"></textarea><br>
 
-					<button>Add post</button>
+					<button id="addPost">Add post</button>
 				</form>
 				<div class="twitter-feed">
 					<a class="twitter-timeline" data-lang="en" data-width="300" data-link-color="#E95F28" href="https://twitter.com/blog_traveller">Tweets by blog_traveller</a> 
