@@ -1,7 +1,9 @@
+iframe {
+	width: 85%;
+}
 .get-intouch {
 	color: white;
-	font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+	font-family: 'Roboto-Thin', sans-serif;
     text-align: center; 
     width: 100%;
     height: 700px;
@@ -30,14 +32,13 @@
 .get-intouch .submit-button {
 	width: 200px;
 	height: 50px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto-Light', sans-serif;
 	text-align: center;
 }
 
 .get-intouch .submit-button:hover {
 	background-color: #212121;
-	border-color: #F2784B;
-	font-weight: 300;
+	border-color: #F2784B; 
 }
 .get-intouch h4{
 	letter-spacing: 1.5px;
@@ -83,10 +84,8 @@ form .get-intouch-form label,
     border-radius: 10px;
     height: 40px;
     color: white;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    
-    
+    font-family: 'Roboto-Thin', sans-serif;
+   
 }
 
 .get-intouch-form input,
@@ -95,7 +94,6 @@ form .get-intouch-form label,
 	width: 70%;
 	margin: 10px 0;
 	color: white;
-	font-weight: 100;
 }
 
 .get-intouch-form input:focus {
@@ -143,4 +141,15 @@ background-color: #212121;
 
 .member-info a:hover {
 	color: orange;
+}
+
+@media only screen and (max-width: 930px){
+	.our-team img {
+		max-width: 120px;
+		margin-left: 5px;
+	}
+	.member-info{
+		font-size: 80%;
+		margin-top: 30px;
+	}
 }

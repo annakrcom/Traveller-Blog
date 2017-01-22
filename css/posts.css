@@ -2,6 +2,7 @@ body {
 	background-color: #e8e8e8;
 }
 main {
+	-js-display: flex;
 	display: -webkit-box;
 	display: flex;
 	flex-wrap: wrap;
@@ -44,7 +45,7 @@ nav.posts-topics a {
 
 .posts-topics li:hover {
     background-color: rgba(0,0,0,0.3);
-    font-weight: 300;
+    font-family: 'Roboto-Light', sans-serif;
 } 
 
 
@@ -52,7 +53,7 @@ nav.posts-topics a {
 	font-size: 6em;
 	color: white;
 	text-align: center;
-	font-family: 'Oleo Script Swash Caps', cursive;
+	font-family: 'OleoScriptSwashCaps-Regular', cursive;
 	letter-spacing: 3px;
 	font-weight: normal;
 	margin-top: 10%;
@@ -84,6 +85,7 @@ nav.posts-topics a {
 section {
 	width: 100%;
 	background-color: #f7f7f7;
+	-js-display: flex;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
@@ -104,6 +106,7 @@ section {
 	width: 70%;
 	height: 5500px;
 	overflow: scroll;
+	-js-display: flex;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -160,6 +163,7 @@ article p {
 /* styling block of comments */
 .comments-container {
 	background-color: #eaeaea;
+	-js-display: flex;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -176,6 +180,7 @@ article p {
 }
 
 .comment {
+	-js-display: flex;
 	display: -webkit-box;
 	display: flex;
 	font-size: 0.7em;
@@ -222,8 +227,7 @@ textarea {
     border: 1px solid white;
     min-height: 50px;
     color: black;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-family: 'Roboto-Thin', sans-serif;
     text-align: center;
     vertical-align: bottom; 
 }
@@ -256,7 +260,7 @@ textarea:focus {
 	margin-top: 10px;
 	color: white;
 	text-align: center;
-	font-family:'Roboto', sans-serif;
+	font-family:'Roboto-Light', sans-serif;
 	font-size: 0.6em;
 	text-transform: uppercase;
 
@@ -272,6 +276,7 @@ textarea:focus {
 
 aside {
 	width: 27%;
+	-js-display: flex;
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-orient: vertical;
@@ -313,7 +318,7 @@ form.create-new-post {
 }
 
 .create-new-post label {
-	font-weight: 300;
+	font-family: 'Roboto-Light', sans-serif;
 }
 
 .create-new-post button {
@@ -355,18 +360,17 @@ label#upload-photo-btn:hover{
 	background-size: 1000px;
 	width: 35%;
 	height: 400px;
-	top: 100px;
-	left: 700px;
+	top: 15%;
+	left: 50%;
 	font-size: 1.5em;
 	border: 1px solid white;
 }
 .pop-up-direct-message button {
 	background: whitesmoke;
-	margin: 20px 10px 2;
-
+	margin: 20px 10px 0px;
 	border: 1px solid white;
 	font-size: 0.9em;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto-Light', sans-serif;
 }
 .pop-up-direct-message button:hover {
 	background-color: white;
@@ -406,9 +410,29 @@ label#upload-photo-btn:hover{
 	line-height: 1em;
 	margin-left: 10px;
 	margin-bottom: 5px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 100;
+	font-family: 'Roboto-Thin', sans-serif;
 	margin-left: 25px;
 }
 
+@media only screen and (max-width: 990px){
+	 .header {
+        top: 39%;
+    }
+    label#upload-photo-btn,
+    label#upload-photo-btn:hover {
+    	padding: 2px;
+
+    }
+    .create-new-post,
+    .articles{
+    	font-size:65%;
+    }
+    .articles {
+    	height: 2100px;
+    }
+    .twitter-feed {
+    	width: 70%;
+    }
+
+}
 

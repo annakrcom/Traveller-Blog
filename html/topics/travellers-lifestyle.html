@@ -3,13 +3,17 @@
 <head>
 	<title>Modern travel blog</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../assets/fonts/font-faces.css">
 	<link rel="stylesheet" type="text/css" href="../../css/normalize-css-v5-0.css">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../../css/posts.css">
-	<link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-
+	<script src="../../js/jquery-1.9.0.js"></script>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+     <!--[if lt IE 10]>
+    	<script src="../js/html5shiv.js"></script>
+    	<script src="../../js/flexibility.js"></script>
+        <script src="../js/es5-shim.min.js"></script>
+     <![endif]-->
 </head>
 <body>
 	<div class="container main-container">
@@ -50,7 +54,7 @@
 				<div class="article-holder">
 					<article class="all-posts">
 						<h3>Grab some filters for your photo lens!</h3>
-						<p class="date-of-posting"></p>
+					
 						<img class="blog-post-image" src="../../assets/images/posts/style/3.jpg" alt="filter.jpg">
 
 						<h4>Take more photos</h4>
@@ -109,7 +113,7 @@
 				<div class="article-holder">
 					<article class="all-posts">
 						<h3>How you ensure your comfort during trip</h3>
-						<p class="date-of-posting"></p>
+						
 						<img class="blog-post-image" src="../../assets/images/posts/style/1.jpg" alt="traveller.jpg" alt="headphones.jpg">
 
 						<h4>Music</h4>
@@ -156,7 +160,7 @@
 				<div class="article-holder">
 					<article class="all-posts">
 						<h3>What is to be a true traveller</h3>
-						<p class="date-of-posting"></p>
+						
 						<img class="blog-post-image" src="../../assets/images/posts/style/2.jpg" alt="avatar.png" alt="avatar.png">
 
 						<h4>Visiting new places is everything!</h4>
@@ -274,16 +278,15 @@
 			</div>
 
 			<div class="footer-social">
-				<div class="button social-item twitter">
-				<a href="https://twitter.com/blog_traveller" target="_blank">0</a>
-				</div>
-				<div class="button social-item facebook">
-					<a href="https://www.facebook.com/Traveller-BLOG-1821807948096831/" target="_blank">0</a>
-				</div>
-				<div class="button social-item instagram">
-					<a href="https://www.instagram.com/traveller_blog/" target="_blank">0</a>
-				</div>
-			</div>
+		
+				<a class="button social-item twitter" href="https://twitter.com/blog_traveller" target="_blank"></a>
+			
+				<a class="button social-item facebook"
+				href="https://www.facebook.com/Traveller-BLOG-1821807948096831/" target="_blank"></a>
+		
+				<a class="button social-item instagram" href="https://www.instagram.com/traveller_blog/" target="_blank"></a>
+			
+		</div>
 		</div>
 
 			<!-- hidden pop-up form to send direct message-activated on button push-->
@@ -292,10 +295,7 @@
 	</div>
 </div>	
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../../js/main.js"></script> 
-<script type="text/javascript" src="../../js/slider.js"></script>
 <script type="text/javascript" src="../../js/posts.js"></script>
 
 </body>

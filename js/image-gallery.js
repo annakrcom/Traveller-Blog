@@ -16,31 +16,50 @@ $(document).ready(function(){
 		});     
 
 
-		showPage = function(page) {
-		    $(".col").hide();
-		    $(".col").each(function(n) {   //pagination setup
 
-		    	if (page == 1) {
-		        	pageSize = 4;
-		        } else {
-		        	pageSize = 3;	
-		       };
+	    var columnsOnPage = 4;
+	    var allColumns = $('.col');
+	    var galleryColumnCount = $('.col').length;
 
-		       if(n >= pageSize * (page - 1) && n <= pageSize * page){
-		            $(this).show();
-		        }
-		    });        
-		}
-		    
+	    function pagination(){
+	    	var paginationLinksContainer = $('.pagin');
+	    	
+	    	var paginationLinksCount = Math.ceil(galleryColumnCount / columnsOnPage);
+	    	var hiddenLinks;
+	    	var currentLinkSet;
+
+	    	if (galleryColumnCount > columnsOnPage){
+		    	$(paginationLinksContainer).append('<ul></ul>');
+
+		    	for(var indx = 0; indx < paginationLinksCount; indx ++){
+		    		$('.pagin ul').append('<li class="pagin-page">'+ (indx + 1) +'</li>');
+		    	}
+	   		}
+	    }
+
+	    function showPage(page){
+
+
+	    	var hiddenColumns = allColumns.filter(":lt(" + ((page - 1) * columnsOnPage) + ")");
+	    	$.merge(hiddenColumns, allColumns.filter(":gt(" + ((page * columnsOnPage) - 1) + ")") );
+	    	var visibleColumns = $('.col').not(hiddenColumns);
+
+	    	hiddenColumns.hide();
+	    	visibleColumns.show();
+	    	
+	    }
+	    
+
+		pagination();  
 		showPage(1);
+	    
 
-		$(".pagin li a").click(function(evt) {
-			evt.preventDefault();
-		    $(".pagin li a").removeClass("current");
+		$(".pagin li").click(function(evt) {
+		    $(".pagin li").removeClass("current");
 		    $(this).addClass("current");
 		    showPage(parseInt($(this).text()));  //activate pagination and take the parameter of chosen page
-	});
-    
+	}); 
+
 
 });
 

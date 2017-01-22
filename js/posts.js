@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 
 		$('.all-posts').addClass('js-category-active').removeClass('js-category-hidden');    
@@ -26,6 +24,9 @@ $(document).ready(function(){
 		});
 
 
+		function addNew(element){
+		   		return document.createElement(element);
+		   }
 
 		$('.articles').click(function(){
             var $target = $(event.target);
@@ -38,18 +39,45 @@ $(document).ready(function(){
 				var $commentText = $comment.val();
 
 				var recepient = $($target).parent().siblings(".all-comments");				   	      
-				var newComment = document.createElement('div');
+				
+				var newComment = addNew('div');
+						$(newComment).attr("class", "comment");
 
-				newComment.className = "comment";
-				newComment.innerHTML = '<div class="comment-user">' 
-				 + '<img src="../../assets/images/avatar.png"><button class="direct-message" value="direct message">' 
-				 + 'direct message</button></div>' +
-				 '<div class="comment-content"><h5><span class="user-name">' 
-				 + $userName + '</span></h5>' +
-				 '<p>' + $commentText + '</p>' +
-				 '<button class="delete-button delete-button-comment">Delete comment</button></div>';
-				  
-			   recepient.append(newComment);
+				var	commentUser = addNew('div');
+						$(commentUser).attr("class","comment-user");
+
+						var userPhoto = addNew('img');
+								$(userPhoto).attr({
+									src:"../../assets/images/avatar.png",
+									alt:"avatar.png"
+								});
+						var directMessageButton = addNew('button');
+								$(directMessageButton).attr({
+									class:"direct-message",
+									value:"direct message"
+								}).text('direct message');	
+
+					commentUser.append(userPhoto, directMessageButton);
+
+				var commentContent = addNew('div');
+						$(commentContent).attr("class","comment-content");
+
+						var nameUnderPhoto = addNew('h5');
+						var nameValue = addNew('span');
+								$(nameValue).attr('class','user-name').text($userName);
+						nameUnderPhoto.append(nameValue);
+
+						var commentText = addNew('p');
+								$(commentText).text($commentText);
+
+						var deleteButton = addNew('button');
+								$(deleteButton).attr("class","delete-button delete-button-comment").text('Delete comment');	
+
+
+
+				commentContent.append(nameUnderPhoto, commentText, deleteButton)		
+				newComment.append(commentUser, commentContent);			
+				recepient.append(newComment);   
 			};
 		});
 
@@ -67,32 +95,92 @@ $(document).ready(function(){
 		$("#addPost").click(function(){ 
 			event.preventDefault();                                    
                 
-			var $mainHeading = $('#heading-new-post').val();	
-			var $subheading = $('#subheading-new-post').val();						   
-			var $introParagraph = $("#new-post-paragraph-1").val();
-			var $subheadingSecond = $("#subheading-2nd-level-new-post").val();
-			var $secondPara = $("#new-post-paragraph-2").val();
-			var $subheadingSecondTwo = $("#subheading-new-post-2").val();
-			var $thirdPara = $("#new-post-paragraph-3").val();
+			var $customMainHeading = $('#heading-new-post').val();	
+			var $customSubheading = $('#subheading-new-post').val();						   
+			var $customIntroParagraph = $("#new-post-paragraph-1").val();
+			var $customSubheadingSecond = $("#subheading-2nd-level-new-post").val();
+			var $customSecondPara = $("#new-post-paragraph-2").val();
+			var $customSubheadingSecondTwo = $("#subheading-new-post-2").val();
+			var $customThirdPara = $("#new-post-paragraph-3").val();
 			var recepient = $(".articles");			   	      
-			var newPost = document.createElement('div');
+	
 
-			newPost.className = "article-holder";
-			newPost.innerHTML = '<article class="all-posts">'+'<h3>'+ $mainHeading +'</h3>' +
-				'<img class="blog-post-image" src="../../assets/images/posts/placeholder.jpg" alt="placeholder.jpg">'+
-			    '<h4>' + $subheading +'</h4><p>' + $introParagraph + '</p><h5>' + $subheadingSecond + 
-				'</h5><p>' + $secondPara + '</p><h5>' + $subheadingSecondTwo + '</h5><p>' + $thirdPara + '</p>' +
-				'<div class="delete-button delete-button-post">DELETE POST</div>' + 
-				'<div class="comments-container">' +
-				'<h4>COMMENTS</h4><div class="all-comments"></div>' +
-				'<div class="comment-field">' +
-				"<label for='user-name'>What's your name?</label><br>" +
-				'<input type="text" name="user-name" placeholder="your name"><br>' +
-				'<textarea rows="4" placeholder="your comment..."></textarea>' +
-				'<input class="submit-button-comments" type="submit" name="submit" value="share comment"></div></div>';
+		   var newPost = addNew('div');
+		   		$(newPost).attr("cclass","article-holder");
 
-		    recepient.append(newPost); 
-		}); 
+		   var article = addNew('article');
+		   		$(article).attr("class","all-posts");
+
+		   var mainHeading = addNew('h3');
+		   		$(mainHeading).text($customMainHeading);
+
+		   var postImage = addNew('img');
+		   		$(postImage).attr({
+				   	class: "blog-post-image",
+				   	src: "../../assets/images/posts/placeholder.jpg",
+				   	alt: "placeholder.jpg"
+		   });
+
+		   var subheading = addNew('h4');
+		   		$(subheading).text($customSubheading);
+
+		   var introParagraph = addNew('p');
+		   		$(introParagraph).text($customIntroParagraph);
+
+		   var subheadingSecond = addNew('h5');
+		   		$(subheadingSecond).text($customSubheadingSecond);
+
+		   var secondPara = addNew('p');
+		   		$(secondPara).text($customSecondPara);
+
+		   var subheadingSecondTwo = addNew('h5');
+		   		$(subheadingSecondTwo).text($customSubheadingSecondTwo);
+
+		   var thirdPara = addNew('p');
+		   		$(thirdPara).text($customThirdPara);
+
+		   var deleteButton = addNew('div');
+		   		$(deleteButton).attr("class", "delete-button delete-button-post").text("DELETE POST");
+
+		   var comments = addNew('div');
+		   		$(comments).attr("class","comments-container");
+		   		var commentsHeading = addNew('h4');
+		   				$(commentsHeading).text('COMMENTS');
+		   		var allComments = addNew('div');
+		   				$(allComments).attr("class", "all-comments");
+		   		var commentField = addNew('div');
+		   				$(commentField).attr("class","comment-field");
+		   		var label = addNew('label');
+		   				$(label).attr("for","user-name").text("What's your name?");
+		   		var breakline = addNew('br');
+		   		var nameField = addNew('input');
+		   				$(nameField).attr({
+			   			type:"text",
+			   			name:"user-name", 
+			   			placeholder:"your name"
+		   		});
+		   		var breakline2 = addNew('br');
+		   		var commentTextArea = addNew('textarea');
+		   				$(commentTextArea).attr({
+		   				rows:"4",
+		   				placeholder:"your comment..."
+		   		});
+		   		var sendComment = addNew('input');
+		   				$(sendComment).attr({
+		   				class:"submit-button-comments",
+		   				type:"submit",
+		   				name:"submit",
+		   				value:"share comment"
+		   		});
+
+
+			comments.append(commentsHeading, allComments, commentField);
+			commentField.append(label, breakline, nameField, breakline2,commentTextArea,sendComment);
+			article.append(mainHeading, postImage, subheading, introParagraph, subheadingSecond, secondPara, subheadingSecondTwo, thirdPara, deleteButton, comments);
+			newPost.append(article);
+			recepient.append(newPost); 
+
+		});		 // end of addpost function
 
 
 

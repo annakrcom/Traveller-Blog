@@ -3,13 +3,19 @@
 <head>
 	<title>Modern travel blog</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../assets/fonts/font-faces.css">
 	<link rel="stylesheet" type="text/css" href="../../css/normalize-css-v5-0.css">
 	<link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../../css/posts.css">
-	<link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="../../js/jquery-1.9.0.js"></script>
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+     <!--[if lt IE 10]>
+    	<script src="../js/html5shiv.js"></script>
+    	<script src="../../js/flexibility.js"></script>
+        <script src="../js/es5-shim.min.js"></script>
+     <![endif]-->
 </head>
+
 <body>
 	<div class="container main-container">
 		<div class="container-top">
@@ -56,7 +62,7 @@
 	<div class="article-holder">
 		<article class="all-posts summer-dests js-category-hidden">
 			<h3>Maldives: relax and privacy</h3>
-			<p class="date-of-posting"></p>
+			
 			<img class="blog-post-image" src="../../assets/images/posts/topdest/13.jpg" alt="maldives.jpg">
 
 			<h4>One of the most popular and gorgeous destinations</h4>
@@ -110,8 +116,8 @@
 
 		<div class="article-holder">
 			<article class="all-posts winter-dests js-category-hidden">
-				<h3>Paris is a dream or every woman</h3>
-				<p class="date-of-posting"></p>
+				<h3>Paris is a dream of every woman</h3>
+				
 				<img class="blog-post-image" src="../../assets/images/posts/topdest/15.jpg" alt="paris.jpg">
 
 				<h4>№1 destination for romantic journey</h4>
@@ -169,8 +175,7 @@
 	<div class="article-holder">
 		<article class="all-posts summer-dests js-category-hidden">
 			<h3>Singapore is a completely another world built in 50 years only</h3>
-			<p class="date-of-posting"></p>
-
+		
 			<img class="blog-post-image" src="../../assets/images/posts/topdest/20.jpg" alt="singapore.jpg">
 
 			<h4>Small does not mean weak</h4>
@@ -263,7 +268,7 @@
 					<textarea id="new-post-paragraph-3" class="optional-item" placeholder="place new paragraph for your article here" rows="10"></textarea><br>
 
 					<button id="addPost">Add post</button>
-				</form>ton>Add post</button>
+				</form>
 			</form>
 			<div class="twitter-feed">
 			<a class="twitter-timeline" data-lang="en" data-width="300" data-link-color="#E95F28" href="https://twitter.com/blog_traveller">Tweets by blog_traveller</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -285,23 +290,22 @@
 
 		<div class="footer-contacts">
 			<div class="contacts-item callus"></div>
-			Call us <span> +9-010-999-999</span>
+			Call us <span>+9-010-999-999</span>
 			<div class="contacts-item writeus"></div>
-			Write us  <span> traveller@blog.me</span>
+			Write us  <span>traveller@blog.me</span>
 			<div class="contacts-item visitus"></div>
-			Visit us in <span> Kyiv, Ukraine</span>
+			Visit us in <span>Kyiv, Ukraine</span>
 		</div>
 
 		<div class="footer-social">
-			<div class="button social-item twitter">
-				<a href="https://twitter.com/blog_traveller" target="_blank">0</a>
-			</div>
-			<div class="button social-item facebook">
-				<a href="https://www.facebook.com/Traveller-BLOG-1821807948096831/" target="_blank">0</a>
-			</div>
-			<div class="button social-item instagram">
-				<a href="https://www.instagram.com/traveller_blog/" target="_blank">0</a>
-			</div>
+		
+				<a class="button social-item twitter" href="https://twitter.com/blog_traveller" target="_blank"></a>
+			
+				<a class="button social-item facebook"
+				href="https://www.facebook.com/Traveller-BLOG-1821807948096831/" target="_blank"></a>
+		
+				<a class="button social-item instagram" href="https://www.instagram.com/traveller_blog/" target="_blank"></a>
+			
 		</div>
 	</div>
 
@@ -311,10 +315,8 @@
 	</div>
 </div>	
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
 <script type="text/javascript" src="../../js/main.js"></script> 
-<script type="text/javascript" src="../../js/slider.js"></script>
 <script type="text/javascript" src="../../js/posts.js"></script>
 
 
