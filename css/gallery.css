@@ -96,12 +96,18 @@ li.pagin-page {
 		width: 250px;
 		height: 250px;
 	}
+	.col {
+		height: 1270px;
+	}
 }	
 	
 @media only screen and (max-width: 1055px) {
 	.gallery-item {
 		width: 210px;
 		height: 210px;
+	}
+	.col {
+		height: 1100px;
 	}
 }	
 

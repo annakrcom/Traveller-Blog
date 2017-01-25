@@ -1,23 +1,27 @@
 $(document).ready(function(){
 
+
 		$('.all-posts').addClass('js-category-active').removeClass('js-category-hidden');    
-		//top destinations & new destinations
+		
 		$('.btn-all-posts').click(function(){
 			$('.all-posts').addClass('js-category-active').removeClass('js-category-hidden');
 		});	
+
 		$('.btn-summer').click(function(){
-				$('.summer-dests').addClass('js-category-active').removeClass('js-category-hidden');
-				$('.winter-dests').removeClass('js-category-active').addClass('js-category-hidden');
-			});
+			$('.summer-dests').addClass('js-category-active').removeClass('js-category-hidden');
+			$('.winter-dests').removeClass('js-category-active').addClass('js-category-hidden');
+		});
+
 		$('.btn-winter').click(function(){
 			$('.winter-dests').addClass('js-category-active').removeClass('js-category-hidden');
 			$('.summer-dests').removeClass('js-category-active').addClass('js-category-hidden');
 		});
-		// travellers lifehacks
+		
 		$('.btn-saving-money').click(function(){
 			$('.saving-money').addClass('js-category-active').removeClass('js-category-hidden');
 			$('.being-smart').removeClass('js-category-active').addClass('js-category-hidden');
 		});
+
 		$('.btn-being-smart').click(function(){
 			$('.being-smart').addClass('js-category-active').removeClass('js-category-hidden');
 			$('.saving-money').removeClass('js-category-active').addClass('js-category-hidden');   
@@ -32,13 +36,11 @@ $(document).ready(function(){
             var $target = $(event.target);
 
 	        if ($target.hasClass('submit-button-comments')) {                                    
-				var $name = $($target).siblings('input[name="user-name"]');                           
-				var $userName = $name.val();													   
-
-				var $comment = $($target).siblings("textarea");									   
-				var $commentText = $comment.val();
-
-				var recepient = $($target).parent().siblings(".all-comments");				   	      
+				var $name = $($target).siblings('input[name="user-name"]'),                           
+					$userName = $name.val(),													   
+					$comment = $($target).siblings("textarea"),								   
+					$commentText = $comment.val(),
+				    recepient = $($target).parent().siblings(".all-comments");				   	      
 				
 				var newComment = addNew('div');
 						$(newComment).attr("class", "comment");
@@ -73,21 +75,24 @@ $(document).ready(function(){
 						var deleteButton = addNew('button');
 								$(deleteButton).attr("class","delete-button delete-button-comment").text('Delete comment');	
 
-
-
-				commentContent.append(nameUnderPhoto, commentText, deleteButton)		
+				commentContent.append(nameUnderPhoto, commentText, deleteButton);		
 				newComment.append(commentUser, commentContent);			
-				recepient.append(newComment);   
+				if ($commentText && $userName){
+					recepient.append(newComment);
+				} else if (!$commentText && !$userName){
+					alert("empty fields can not be submitted, please fill and try again!");
+				} else if (!$userName){
+					alert("please type your name!");
+				} else if (!$commentText){
+					alert("please type your comment first!");
+				};
 			};
 		});
 
 
-
-
-		$(".optional-item").hide();
+		$(".optional-item").hide(); // additional inputs 'new post' form
 		$(".add-new-post-item").click(function(event){
-			var eventTarget = this;
-			event.preventDefault();
+			event.preventDefault(); //avoiding page reload on button click
 			$(".optional-item").toggle();
 		});
 
@@ -95,16 +100,15 @@ $(document).ready(function(){
 		$("#addPost").click(function(){ 
 			event.preventDefault();                                    
                 
-			var $customMainHeading = $('#heading-new-post').val();	
-			var $customSubheading = $('#subheading-new-post').val();						   
-			var $customIntroParagraph = $("#new-post-paragraph-1").val();
-			var $customSubheadingSecond = $("#subheading-2nd-level-new-post").val();
-			var $customSecondPara = $("#new-post-paragraph-2").val();
-			var $customSubheadingSecondTwo = $("#subheading-new-post-2").val();
-			var $customThirdPara = $("#new-post-paragraph-3").val();
-			var recepient = $(".articles");			   	      
+			var $customMainHeading = $('#heading-new-post').val(),	
+				$customSubheading = $('#subheading-new-post').val(),						   
+				$customIntroParagraph = $("#new-post-paragraph-1").val(),
+				$customSubheadingSecond = $("#subheading-2nd-level-new-post").val(),
+				$customSecondPara = $("#new-post-paragraph-2").val(),
+				$customSubheadingSecondTwo = $("#subheading-new-post-2").val(),
+				$customThirdPara = $("#new-post-paragraph-3").val(),
+				recepient = $(".articles");			   	      
 	
-
 		   var newPost = addNew('div');
 		   		$(newPost).attr("cclass","article-holder");
 
@@ -144,27 +148,36 @@ $(document).ready(function(){
 
 		   var comments = addNew('div');
 		   		$(comments).attr("class","comments-container");
+
 		   		var commentsHeading = addNew('h4');
 		   				$(commentsHeading).text('COMMENTS');
+
 		   		var allComments = addNew('div');
 		   				$(allComments).attr("class", "all-comments");
+
 		   		var commentField = addNew('div');
 		   				$(commentField).attr("class","comment-field");
+
 		   		var label = addNew('label');
 		   				$(label).attr("for","user-name").text("What's your name?");
+
 		   		var breakline = addNew('br');
+
 		   		var nameField = addNew('input');
 		   				$(nameField).attr({
 			   			type:"text",
 			   			name:"user-name", 
 			   			placeholder:"your name"
 		   		});
+
 		   		var breakline2 = addNew('br');
+
 		   		var commentTextArea = addNew('textarea');
 		   				$(commentTextArea).attr({
 		   				rows:"4",
 		   				placeholder:"your comment..."
 		   		});
+
 		   		var sendComment = addNew('input');
 		   				$(sendComment).attr({
 		   				class:"submit-button-comments",
@@ -178,7 +191,15 @@ $(document).ready(function(){
 			commentField.append(label, breakline, nameField, breakline2,commentTextArea,sendComment);
 			article.append(mainHeading, postImage, subheading, introParagraph, subheadingSecond, secondPara, subheadingSecondTwo, thirdPara, deleteButton, comments);
 			newPost.append(article);
+			if ($customMainHeading && $customIntroParagraph){
 			recepient.append(newPost); 
+			} else if (!$customMainHeading && !$customIntroParagraph) {
+				alert("You can not submit a post without at least main heading and intro paragraph");
+			} else if (!$customMainHeading){
+				alert("You can not submit a post without main heading");
+			} else if (!$customIntroParagraph){
+				alert("You can not submit a post intro paragraph");
+			}
 
 		});		 // end of addpost function
 
@@ -186,28 +207,31 @@ $(document).ready(function(){
 
         $('.articles').click(function(){         
             var $target = $(event.target);
+
             if ($target.hasClass('direct-message')){  
-            $('.pop-up-direct-message').slideDown('fast');
-            $('.pop-up-direct-message').html('<textarea rows="10" placeholder="type your message"></textarea>' + 
-                    '<button class="send-direct">Send direct message</button><button class="cancel">Cancel</button>');
-            $('.cancel').click(function(){
-                    $('.pop-up-direct-message').slideUp('fast');
-            });
-            $('.send-direct').click(function(){
-                    $('.pop-up-direct-message').delay(700).slideUp('fast');
-                    alert('Your message has been sent successfully!');  
-                });
+	            $('.pop-up-direct-message').slideDown('fast');
+	            $('.pop-up-direct-message').html('<textarea rows="10" placeholder="type your message"></textarea>' + 
+	                    '<button class="send-direct">Send direct message</button><button class="cancel">Cancel</button>');
+	            $('.cancel').click(function(){
+	                    $('.pop-up-direct-message').slideUp('fast');
+	            });
+	            $('.send-direct').click(function(){
+	                    $('.pop-up-direct-message').delay(700).slideUp('fast');
+	                    alert('Your message has been sent successfully!');  
+	            });
             }
       });
 
 
         $('.articles').click(function(){
           var $target = $(event.target);
+
           if ($target.hasClass('delete-button')){           
               var areYouSure = confirm('are you sure?');
+
               if (areYouSure == true) {
               	$($target).parent().parent().remove();
-              }
+              };
           };
         });
 		
